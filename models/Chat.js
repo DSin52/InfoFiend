@@ -6,7 +6,7 @@ function Chat(db) {
 
 Chat.prototype = {
 
-	"addMesage": function(chatRoom, message, callback) {
+	"addMessage": function(chatRoom, message, callback) {
 		this.db.collection(chatRoom).insert({"Username": message.Username, "said": message.Message}, callback);
 	},
 
